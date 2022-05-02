@@ -26,7 +26,6 @@ var estadoPrincipal = {
     juego.load.audio('fondo', 'music/fondo.mp3');
     juego.load.audio('disparo', 'music/disparo.wav');
     juego.load.audio('gameOver', 'music/ThisGameIsOver.wav');
-    juego.load.audio('colision', 'music/colision.wav');
   },
   create: function () {
     //mostrar pantalla
@@ -80,7 +79,6 @@ var estadoPrincipal = {
     //declarar los audios 
     disparo = this.sound.add('disparo');
     gameOver = this.sound.add('gameOver');
-    colision = this.sound.add('colision');
   },
   update: function () {
     //animamos el juego
@@ -118,7 +116,6 @@ function colision(bala, enemigo) {
   enemigo.kill();
   puntos++;
   txtPuntos.text = puntos;
-  colision.play();
 }
 
 
